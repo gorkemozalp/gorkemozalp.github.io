@@ -1,74 +1,216 @@
+/* --- Global Styles --- */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+:root {
+    --primary-color: #A34E3F; /* A warm, deep red/brown for jazz aesthetic */
+    --secondary-color: #333;  /* Dark text/background */
+    --light-color: #f7f7f7;   /* Off-white background */
+    --accent-color: #FFC300;  /* A subtle golden accent */
+    --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 
 body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  background-color: #0d0d0d;
-  color: #f1f1f1;
-  line-height: 1.6;
+    font-family: var(--font-family);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-color);
+    color: var(--secondary-color);
+    scroll-behavior: smooth;
 }
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+    line-height: 1.2;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0.1em;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 300; /* Lighter weight for the sub-heading */
+    color: var(--secondary-color);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 2em;
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+}
+
+/* --- Header & Navigation --- */
 
 header {
-  text-align: center;
-  padding: 3rem 1rem;
-  background-color: #111;
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    padding: 80px 0;
+    text-align: center;
+    /* Optional: Add a background image here */
+    /* background: url('your-professional-photo.jpg') no-repeat center center/cover; */
 }
 
-header h1 {
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-  margin-bottom: 0.3rem;
+.header-content h1 {
+    color: var(--light-color);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-header p {
-  font-weight: 300;
-  color: #aaa;
-  margin-bottom: 1rem;
+.header-content h2 {
+    color: var(--light-color);
 }
 
 nav a {
-  color: #f1f1f1;
-  text-decoration: none;
-  margin: 0 0.8rem;
-  font-weight: 500;
-  transition: color 0.3s;
+    color: var(--light-color);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+    letter-spacing: 1px;
 }
 
 nav a:hover {
-  color: #d1b97f;
+    color: var(--accent-color);
 }
 
-section {
-  max-width: 800px;
-  margin: 3rem auto;
-  padding: 0 1rem;
+/* --- Buttons & Links --- */
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s, opacity 0.3s;
+    text-transform: uppercase;
+    font-size: 0.9em;
 }
 
-section h2 {
-  border-bottom: 1px solid #444;
-  padding-bottom: 0.3rem;
-  margin-bottom: 1rem;
-  color: #d1b97f;
+.primary-button {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: 2px solid var(--primary-color);
 }
 
-ul {
-  list-style: none;
-  padding-left: 0;
+.primary-button:hover {
+    background-color: #8C443A; /* Slightly darker hover */
 }
 
-ul li {
-  margin-bottom: 0.6rem;
+.large-button {
+    font-size: 1.1em;
+    padding: 15px 30px;
 }
 
-a {
-  color: #d1b97f;
+/* --- Music Section Grid --- */
+
+.music-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
 }
+
+.music-item {
+    text-align: center;
+}
+
+.music-item h4 {
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* --- Contact Section --- */
+
+.contact-section {
+    text-align: center;
+    background-color: #eee;
+    padding: 60px 0;
+}
+
+.call-to-action {
+    font-size: 1.2em;
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: var(--primary-color);
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* --- Social Links (Icons) --- */
+
+.social-links {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-links img {
+    width: 36px; /* Size of the icons */
+    height: 36px;
+    transition: opacity 0.3s;
+    opacity: 0.7;
+}
+
+.social-links img:hover {
+    opacity: 1;
+}
+
+/* --- Footer --- */
 
 footer {
-  text-align: center;
-  padding: 2rem 0;
-  border-top: 1px solid #333;
-  font-size: 0.9rem;
-  color: #999;
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* --- Media Queries (Responsiveness) --- */
+
+@media (max-width: 768px) {
+    .music-grid {
+        grid-template-columns: 1fr; /* Stack music content vertically on smaller screens */
+    }
+
+    header {
+        padding: 40px 0;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
 }
